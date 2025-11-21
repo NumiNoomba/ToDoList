@@ -1,0 +1,20 @@
+-- Create categories and todos tables
+CREATE TABLE IF NOT EXISTS categories (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS todos (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  completed BOOLEAN NOT NULL DEFAULT FALSE,
+  category_id INTEGER REFERENCES categories(id) ON DELETE SET NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Seed default categories
+INSERT INTO categories (name) VALUES ('Work') ON CONFLICT DO NOTHING;
+INSERT INTO categories (name) VALUES ('Personal') ON CONFLICT DO NOTHING;
+INSERT INTO categories (name) VALUES ('Shopping') ON CONFLICT DO NOTHING;

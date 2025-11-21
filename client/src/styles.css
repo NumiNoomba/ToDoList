@@ -1,0 +1,7 @@
+body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0}
+.ant-layout-header{display:flex;align-items:center;padding:0 16px}
+.ant-layout-content{background:#f0f2f5}
+
+@media (max-width: 768px){
+  .ant-layout-content{padding:8px}
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+
+      <div class="topbar">
+        <div>
+          <input id="search" placeholder="Search by title" />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div>
+          <button id="openCategoryManager">Manage Categories</button>
+        </div>
+      </div>
+
+      <div class="form">
+        <input id="title" placeholder="Title" />
+        <input id="description" placeholder="Description" />
+        <select id="categorySelect"><option value="">(No category)</option></select>
+        <button id="createBtn">Create Todo</button>
+      </div>
+
+      <div id="todos"></div>
+
+      <div class="pagination">
+        <button id="prevPage">Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </div>
+
+    <div id="categoryModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Categories</h2>
+        <div class="cat-form">
+          <input id="newCatName" placeholder="New category name" />
+          <button id="addCatBtn">Add</button>
+        </div>
+        <ul id="categoriesList"></ul>
+        <button id="closeCat">Close</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+:root{--bg:#f7f7f8;--card:#fff;--muted:#666}
+body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;padding:20px}
+.container{max-width:900px;margin:0 auto}
+h1{margin:0 0 12px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.form{display:flex;gap:8px;margin-bottom:12px}
+input,select,button{padding:8px;border:1px solid #ddd;border-radius:4px}
+#todos{display:flex;flex-direction:column;gap:8px}
+.todo{background:var(--card);padding:12px;border-radius:6px;display:flex;justify-content:space-between;align-items:center;border:1px solid #eee}
+.todo .left{display:flex;gap:12px;align-items:center}
+.todo .title{font-weight:600}
+.todo .muted{color:var(--muted);font-size:0.9em}
+.actions button{margin-left:6px}
+.pagination{display:flex;gap:8px;align-items:center;margin-top:12px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center}
+.modal.hidden{display:none}
+.modal-content{background:#fff;padding:20px;border-radius:8px;width:400px}
+.cat-form{display:flex;gap:8px;margin-bottom:8px}
+#categoriesList{list-style:none;padding:0;margin:0}
+#categoriesList li{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f0f0f0}
